@@ -1,16 +1,29 @@
-# DevProject Starter Generator
+# ⚡ DevProject Starter Generator
 
-DevProject Starter Generator is a lightweight CLI tool for generating clean frontend, backend and fullstack project starters from the terminal.
+<p align="center">
+  <strong>A lightweight CLI tool to generate clean frontend, backend and fullstack project starters in seconds.</strong>
+</p>
 
-It helps developers create organized project structures quickly using reusable templates for modern JavaScript applications.
+<p align="center">
+  <span>🚀 Fast setup</span> ·
+  <span>🧩 Reusable templates</span> ·
+  <span>🛠️ Developer friendly</span> ·
+  <span>📦 CLI powered</span>
+</p>
 
-## Overview
+---
 
-This project works like a small project scaffolder.
+## ✨ Overview
 
-Instead of manually creating folders, files, base configuration and starter code every time, you can run one command and generate a ready-to-use starter project.
+**DevProject Starter Generator** is a small but powerful project scaffolder built for developers who want to start faster and keep their project structure clean from day one.
 
-## Available templates
+Instead of manually creating folders, files, base configuration and starter code every time, you can generate a ready-to-use project with a single command.
+
+Think of it as a simple custom starter generator for modern JavaScript projects.
+
+---
+
+## 🚀 What can it generate?
 
 ```txt
 frontend    -> Vanilla JavaScript frontend starter
@@ -19,13 +32,40 @@ fullstack   -> Vanilla JavaScript frontend + Express backend starter
 erp-module  -> ERP/CRM module scaffold
 ```
 
-## CLI command
+---
+
+## 🧠 Why this project exists
+
+Starting new projects often means repeating the same setup again and again:
+
+```txt
+Create folders
+Create base files
+Set up package.json
+Create app entry points
+Create routes
+Create services
+Create styles
+Create README files
+```
+
+This CLI helps reduce that repetitive work.
+
+The goal is simple:
+
+> Generate clean starter projects quickly, consistently and with a scalable structure.
+
+---
+
+## 🖥️ CLI command
 
 ```bash
 dpsg
 ```
 
-## Requirements
+---
+
+## 📋 Requirements
 
 ```txt
 Node.js 18+
@@ -33,18 +73,20 @@ npm
 Git
 ```
 
-## Installation for local development
+---
+
+## 📦 Installation for local development
 
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/devproject-starter-generator.git
+git clone https://github.com/MatiasFrutos/DevProject-Starter-Generator.git
 ```
 
 Enter the project folder:
 
 ```bash
-cd devproject-starter-generator
+cd DevProject-Starter-Generator
 ```
 
 Install dependencies:
@@ -53,7 +95,9 @@ Install dependencies:
 npm install
 ```
 
-## Run locally
+---
+
+## ⚙️ Run locally
 
 List available templates:
 
@@ -85,7 +129,9 @@ Create an ERP module scaffold:
 node ./bin/index.js create erp-module clientes
 ```
 
-## Optional local global command
+---
+
+## 🌍 Optional global command
 
 You can register the CLI locally using:
 
@@ -93,17 +139,24 @@ You can register the CLI locally using:
 npm link
 ```
 
-Then you can use:
+Then you can run it as a real terminal command:
 
 ```bash
 dpsg list
+```
+
+Create projects faster:
+
+```bash
 dpsg create frontend my-frontend
 dpsg create backend my-api
 dpsg create fullstack my-system
 dpsg create erp-module proveedores
 ```
 
-## Project structure
+---
+
+## 🧱 Project structure
 
 ```txt
 devproject-starter-generator/
@@ -128,17 +181,17 @@ devproject-starter-generator/
   README.md
 ```
 
-## How it works
+---
 
-The CLI receives a template name and a project name.
+## 🔄 How it works
 
-Example:
+When you run:
 
 ```bash
 dpsg create backend demo-api
 ```
 
-Then it:
+The CLI performs the following steps:
 
 ```txt
 1. Validates the selected template.
@@ -148,9 +201,11 @@ Then it:
 5. Creates the final project folder.
 ```
 
-## Dynamic tokens
+---
 
-Templates can use tokens that are replaced during generation.
+## 🧬 Dynamic template tokens
+
+Templates can use dynamic tokens that are automatically replaced during generation.
 
 ```txt
 __PROJECT_NAME__   -> generated project name
@@ -167,13 +222,15 @@ Example:
 __PROJECT_NAME__
 ```
 
-becomes:
+Becomes:
 
 ```txt
 demo-api
 ```
 
-## Generated frontend starter
+---
+
+## 🎨 Frontend starter
 
 The frontend template includes:
 
@@ -187,7 +244,34 @@ Core utilities
 Reusable helpers
 ```
 
-## Generated backend starter
+Generated structure:
+
+```txt
+my-frontend/
+  index.html
+  package.json
+  README.md
+  src/
+    main.js
+    app.js
+    core/
+    components/
+    pages/
+    styles/
+    utils/
+```
+
+Run it:
+
+```bash
+cd my-frontend
+npm install
+npm run dev
+```
+
+---
+
+## 🧩 Backend starter
 
 The backend template includes:
 
@@ -203,59 +287,162 @@ Middlewares folder
 Utilities folder
 ```
 
-## Backend healthcheck
+Generated structure:
 
-After creating and running a backend project:
+```txt
+my-api/
+  package.json
+  README.md
+  .env.example
+  src/
+    server.js
+    app.js
+    config/
+    controllers/
+    middlewares/
+    repositories/
+    routes/
+    services/
+    utils/
+```
+
+Run it:
 
 ```bash
+cd my-api
+npm install
 npm run dev
 ```
 
-Open:
-
-```txt
-http://localhost:3000/api
-```
-
-or:
+Healthcheck:
 
 ```txt
 http://localhost:3000/api/health
 ```
 
-## Scripts
+Expected response:
+
+```json
+{
+  "ok": true,
+  "service": "my-api",
+  "status": "online",
+  "timestamp": "2026-05-13T22:00:00.000Z"
+}
+```
+
+---
+
+## 🏗️ Fullstack starter
+
+The fullstack template includes:
+
+```txt
+frontend/
+backend/
+README.md
+```
+
+Ideal for:
+
+```txt
+Internal tools
+Dashboards
+Admin panels
+ERP systems
+CRM systems
+Fullstack prototypes
+```
+
+Run backend:
+
+```bash
+cd backend
+npm install
+npm run dev
+```
+
+Run frontend in another terminal:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+---
+
+## 🧾 ERP module starter
+
+The ERP module template is designed to generate a base scaffold for business modules.
+
+Example:
+
+```bash
+dpsg create erp-module proveedores
+```
+
+It can generate files for:
+
+```txt
+Frontend page
+Frontend styles
+Frontend service
+Frontend components
+Backend routes
+Backend controller
+Backend service
+Backend repository
+SQL schema
+```
+
+Useful for projects like:
+
+```txt
+ERP systems
+CRM systems
+Admin dashboards
+Internal management platforms
+Business tools
+```
+
+---
+
+## 📜 Available scripts
+
+Run CLI:
 
 ```bash
 npm run start
 ```
 
-Runs the CLI entry file.
+Development mode:
 
 ```bash
 npm run dev
 ```
 
-Runs the CLI entry file in development mode.
+Create frontend test project:
 
 ```bash
 npm run test:create:frontend
 ```
 
-Creates a frontend test project.
+Create backend test project:
 
 ```bash
 npm run test:create:backend
 ```
 
-Creates a backend test project.
+Create fullstack test project:
 
 ```bash
 npm run test:create:fullstack
 ```
 
-Creates a fullstack test project.
+---
 
-## Clean generated demos
+## 🧹 Clean generated demos
 
 PowerShell:
 
@@ -272,23 +459,64 @@ Bash:
 rm -rf demo-front demo-api demo-fullstack prueba-cli-front
 ```
 
-## Roadmap
+---
+
+## 🛣️ Roadmap
 
 ```txt
 Add React starter
 Add Angular starter
 Add PostgreSQL starter
+Add Prisma starter
 Add JWT auth template
 Add Docker template
 Add interactive prompts
 Add custom template configuration
+Add testing templates
 Publish package to npm
 ```
 
-## Author
+---
 
-Developed by Matias Frutos.
+## 💡 Future ideas
 
-## License
+```txt
+Template presets
+Custom user templates
+Configuration file support
+Automatic README generator
+Module generator for dashboards
+Database schema generator
+Auth-ready backend starter
+CLI update command
+```
 
-MIT
+---
+
+## 📌 Status
+
+```txt
+MVP working
+Frontend template tested
+Backend template tested
+CLI command validated
+Ready for GitHub
+```
+
+---
+
+## 👨‍💻 Author
+
+Developed by **Matias Frutos**.
+
+---
+
+## 📄 License
+
+MIT License.
+
+---
+
+<p align="center">
+  <strong>Build faster. Start cleaner. Ship smarter. 🚀</strong>
+</p>
