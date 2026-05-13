@@ -1,0 +1,14 @@
+{
+  "name": "__PROJECT_NAME__",
+  "version": "1.0.0",
+  "description": "Frontend starter generated with DevProject Starter Generator.",
+  "type": "module",
+  "scripts": {
+    "dev": "npx serve .",
+    "start": "npx serve ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "devproject-starter-generator",
+  "version": "1.0.0",
+  "description": "A lightweight CLI tool to generate clean frontend, backend and fullstack project starters.",
+  "type": "module",
+  "bin": {
+    "dpsg": "./bin/index.js",
+    "devproject-starter-generator": "./bin/index.js"
+  },
+  "scripts": {
+    "start": "node ./bin/index.js",
+    "dev": "node ./bin/index.js",
+    "test:create:frontend": "node ./bin/index.js create frontend test-frontend",
+    "test:create:backend": "node ./bin/index.js create backend test-backend",
+    "test:create:fullstack": "node ./bin/index.js create fullstack test-fullstack"
+  },
+  "keywords": [
+    "cli",
+    "starter",
+    "generator",
+    "frontend",
+    "backend",
+    "fullstack",
+    "boilerplate",
+    "project-generator"
+  ],
+  "author": "Matias Frutos",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "commander": "^14.0.3",
+    "fs-extra": "^11.3.5",
+    "inquirer": "^13.4.3",
+    "ora": "^9.4.0"
+  }
+}
